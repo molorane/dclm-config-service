@@ -1,0 +1,48 @@
+# Default profile: this will apply to all the profiles
+spring:
+  liquibase:
+    change-log: classpath:db/changelog/db.changelog-master.xml
+    enabled: true
+  mvc:
+    throw-exception-if-no-handler-found: true
+  resources:
+    add-mappings: false
+  servlet:
+    multipart:
+      max-file-size: 5MB
+      max-request-size: 5MB
+logging:
+  file: /var/log/levels-service-log/api.log
+server:
+  servlet:
+    context-path: /levels
+  port: 8090
+
+---
+
+# Local profile
+spring:
+  profiles: local
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: Blessing**4
+    url: jdbc:mysql://localhost:3306/dclm?serverTimezone=UTC
+    username: root
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+---
+
+# Dev profile
+spring:
+  profiles: dev
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    password: L3v3l5DBu5r@11
+    url: jdbc:postgresql://10.55.66.11:5432/levels
+    username: levels
+
+# Put other profiles down here
