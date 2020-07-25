@@ -27,7 +27,7 @@ logging:
 server:
   servlet:
     context-path: /levels
-  port: 8090
+  port: 9001
   compression:
     enabled: true
     mime-types: text/html, text/css, text/plain, application/json
