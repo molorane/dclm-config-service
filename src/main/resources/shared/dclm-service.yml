@@ -11,12 +11,26 @@ spring:
     multipart:
       max-file-size: 5MB
       max-request-size: 5MB
+  flyway:
+    enabled: false
+  thymeleaf:
+    cache: false
+    check-template: true
+    check-template-location: true
+    enabled: true
+    encoding: UTF-8
+    mode: HTML
+    prefix: classpath:/templates/
+    suffix: .html
 logging:
   file: /var/log/levels-service-log/api.log
 server:
   servlet:
     context-path: /levels
   port: 8090
+  compression:
+    enabled: true
+    mime-types: text/html, text/css, text/plain, application/json
 
 ---
 
