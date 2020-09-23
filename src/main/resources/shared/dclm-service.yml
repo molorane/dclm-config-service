@@ -30,6 +30,17 @@ server:
     enabled: true
     mime-types: text/html, text/css, text/plain, application/json
 
+denomination:
+  name: Deeper Christian Life Ministry South Africa
+  abv: DCLM
+  country: Nigeria
+  founder: William Fulio Kumuyi
+  startDate: 1973-01-01
+  hq: Abujar
+  gpsLat: 9.0962524
+  gpsLong: 7.2822984
+  logo: 2014098618.jpg
+  mission: Your Spiritual Welfare is our concern
 ---
 
 # Local profile
